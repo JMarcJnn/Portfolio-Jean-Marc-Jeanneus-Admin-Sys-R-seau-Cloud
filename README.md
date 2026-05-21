@@ -1,7 +1,7 @@
 # 🛡️ Portfolio — Jean-Marc Jeanneus
 
 > Administrateur Système & Réseau & Cloud | Apprenti Pentester | Île-de-France  
-> 🌐 [Voir le portfolio en ligne](https://jmjeanneus.netlify.app)
+
 
 ## 📁 Structure du projet
 
@@ -32,27 +32,3 @@ portfolio-jmj/
     └── cv-jeanneus.pdf     ← CV Jean-Marc Jeanneus
 ```
 
-## 🚀 Lancer en local
-
-```bash
-# Python
-python3 -m http.server 3000
-
-# Node.js
-npx serve .
-```
-
-Ouvre **http://localhost:3000**
-
-## 🔄 Mettre à jour le portfolio
-
-1. Modifie les fichiers souhaités
-2. Commit & push sur GitHub
-3. Netlify redéploie automatiquement ⚡
-
-## 📬 Contact
-
-- **Email** : jeanneus_jean.marc@hotmail.com
-- **LinkedIn** : Jean-Marc Jeanneus
-- **Tél** : 07 52 52 78 08
-- **Disponibilité** : Septembre 2026
