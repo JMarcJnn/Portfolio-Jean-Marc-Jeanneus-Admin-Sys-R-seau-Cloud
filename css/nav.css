@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════
+   Portfolio — Jean-Marc Jeanneus
+   Admin Sys & Réseau & Cloud | Apprenti Pentester
+   ─────────────────────────────────────────────── */
+
+/* ─── NAVBAR ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px max(48px, calc((100vw - 1600px) / 2 + 48px));
+    background: rgba(8,12,16,0.0);
+    backdrop-filter: blur(0px);
+    border-bottom: 1px solid transparent;
+    transition: padding 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  /* Scrolled state — added via JS */
+  nav.scrolled {
+    padding: 12px max(48px, calc((100vw - 1600px) / 2 + 48px));
+    background: rgba(8,12,16,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,255,136,0.12);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow: var(--glow);
+    transition: font-size 0.3s;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  /* Active underline indicator */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    box-shadow: var(--glow);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--accent); }
+  .nav-links a:hover::after,
+  .nav-links a.active::after { transform: scaleX(1); }
+  .nav-status {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .status-dot {
+    width: 11px; height: 11px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  /* ── Hamburger improvement ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,255,136,0.2);
+    background: rgba(0,255,136,0.04);
+    z-index: 1001;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .hamburger:hover { background: rgba(0,255,136,0.1); border-color: rgba(0,255,136,0.4); }
+  .hamburger span {
+    display: block;
+    width: 20px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: var(--glow);
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

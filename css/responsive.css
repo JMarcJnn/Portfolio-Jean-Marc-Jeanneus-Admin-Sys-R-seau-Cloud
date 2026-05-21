@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════
+   Portfolio — Jean-Marc Jeanneus
+   Admin Sys & Réseau & Cloud | Apprenti Pentester
+   ─────────────────────────────────────────────── */
+
+/* ════════════════════════════════════════════
+     RESPONSIVE — SYSTÈME COMPLET
+     Breakpoints : 1200 | 899 | 599 | 380
+  ════════════════════════════════════════════ */
+
+  /* ─── LAPTOP (900–1199px) ─── */
+  @media (min-width: 900px) and (max-width: 1199px) {
+    nav { padding: 16px 36px; }
+    .hero { padding: 110px 36px 80px; }
+    section { padding: 80px 36px; }
+    .hero-cards { max-width: 100%; }
+    .hero-bottom { max-width: 100%; }
+    .fc-section { padding: 0 36px; }
+    .lab-section { padding: 0 36px; }
+    .contact-new { padding: 0 36px; }
+    .footer-top { padding: 40px 36px 32px; }
+    .footer-bottom { padding: 16px 36px; }
+  }
+
+  /* ─── TABLET (600–899px) ─── */
+  @media (max-width: 899px) {
+    /* NAV */
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-status { display: none; }
+
+    /* HERO */
+    .hero { padding: 100px 20px 80px; }
+    .hero-stats { display: none; }
+    .hero-name { font-size: clamp(2.8rem, 10vw, 4.5rem); }
+    .hero-cards {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%;
+    }
+    .hero-bottom {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 100%;
+      gap: 12px;
+    }
+    .btn-primary { justify-content: center; }
+    .hero-stack { justify-content: center; flex-wrap: wrap; }
+
+    /* SECTIONS */
+    section { padding: 64px 20px; }
+    .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+
+    /* ABOUT */
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+
+    /* TIMELINE — empilé */
+    .timeline { padding: 0 20px; max-width: 100%; }
+    .timeline::before { left: 16px; transform: none; }
+    .timeline-item {
+      grid-template-columns: 32px 1fr !important;
+      gap: 0 !important;
+    }
+    .timeline-item .timeline-dot-wrap {
+      grid-column: 1 !important;
+      grid-row: 1;
+      padding-top: 20px;
+      justify-content: flex-start;
+    }
+    .timeline-item .timeline-content {
+      grid-column: 2 !important;
+      grid-row: 1;
+      margin: 0 0 0 12px !important;
+    }
+    .timeline-item .timeline-spacer { display: none !important; }
+    .timeline-item:nth-child(2) .timeline-content,
+    .timeline-item:nth-child(4) .timeline-content { margin-left: 12px !important; }
+
+    /* SKILLS */
+    .skills-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* LAB */
+    .lab-section { padding: 0 20px; }
+    .lab-header-row { flex-direction: column; align-items: flex-start; }
+    .lab-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    /* CERTS */
+    .fc-section { padding: 0 20px; }
+    .fc-header-row { flex-direction: column; gap: 12px; }
+    .fc-bts { grid-template-columns: 1fr; gap: 20px; }
+    .fc-bts-cols { grid-template-columns: 1fr; gap: 16px; }
+    .fc-cpts { grid-template-columns: 1fr; gap: 20px; }
+    .fc-cpts-cols { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .fc-mini-grid { grid-template-columns: 1fr; }
+
+    /* CONTACT */
+    .contact-new { padding: 0 20px; }
+    .contact-new-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    /* FOOTER */
+    .footer-top { grid-template-columns: 1fr; gap: 28px; padding: 32px 20px 24px; }
+    .footer-bottom { padding: 14px 20px; flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+  /* ─── PHONE (≤ 599px) ─── */
+  @media (max-width: 599px) {
+    /* NAV */
+    nav { padding: 12px 16px; }
+    .nav-logo { font-size: 13px; letter-spacing: 2px; }
+
+    /* HERO */
+    .hero { padding: 90px 16px 72px; }
+    .hero-name { font-size: clamp(2.2rem, 11vw, 3.5rem); letter-spacing: 0; }
+    .hero-subtitle { font-size: clamp(0.95rem, 3.5vw, 1.2rem); }
+    .hero-subtitle-pills { font-size: clamp(0.85rem, 3vw, 1rem); gap: 8px; }
+    .hero-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hcard { padding: 16px 14px; border-radius: 12px; }
+    .hcard-icon { width: 46px; height: 46px; font-size: 18px; }
+    .hcard-title { font-size: 13px; }
+    .hcard-desc { font-size: 11px; }
+    .hero-badge { font-size: 11px; padding: 5px 12px; }
+
+    /* SECTIONS */
+    section { padding: 52px 16px; }
+    .section-title { font-size: clamp(1.4rem, 7vw, 1.9rem); }
+    .section-tag { font-size: 10px; letter-spacing: 2px; }
+
+    /* ABOUT terminal */
+    .terminal-body { font-size: 11px; padding: 14px 16px; }
+
+    /* SKILLS */
+    .skills-grid { grid-template-columns: 1fr; gap: 14px; }
+    .skill-cat-title { font-size: 11px; }
+    .skill-name { font-size: 11px; }
+
+    /* TIMELINE */
+    .timeline-role { font-size: 15px; }
+    .timeline-desc { font-size: 13px; }
+    .timeline-tags { gap: 6px; }
+    .timeline-tag { font-size: 10px; padding: 2px 8px; }
+
+    /* LAB */
+    .lab-grid { grid-template-columns: 1fr; gap: 14px; }
+    .lab-card-img { height: 150px; }
+    .lab-section-title { font-size: clamp(1.4rem, 5vw, 1.8rem); }
+
+    /* CERTS */
+    .fc-cpts-cols { grid-template-columns: 1fr; }
+    .fc-bts-logo { font-size: 18px; padding: 16px; }
+    .fc-mini { padding: 20px; }
+    .fc-mini-name { font-size: 15px; }
+    .fc-mini-skills { grid-template-columns: 1fr; }
+
+    /* CONTACT */
+    .contact-new-title { font-size: clamp(1.5rem, 6vw, 2rem); flex-direction: column; text-align: center; }
+    .contact-row { padding: 12px 14px; gap: 10px; }
+    .contact-row-value { font-size: 13px; }
+    .contact-row-icon { width: 34px; height: 34px; font-size: 16px; }
+    .statut-card { padding: 12px; }
+    .statut-card-name { font-size: 13px; }
+
+    /* FOOTER */
+    .footer-brand-name { font-size: 16px; }
+    .footer-brand-desc { font-size: 12px; }
+    .footer-col-link, .footer-social-link { font-size: 13px; }
+    .footer-copy { font-size: 11px; }
+
+    /* SCROLL INDICATOR */
+    .scroll-indicator { bottom: 20px; }
+  }
+
+  /* ─── SMALL PHONE (≤ 380px) ─── */
+  @media (max-width: 380px) {
+    .hero-name { font-size: clamp(1.9rem, 12vw, 2.8rem); }
+    .hero-cards { grid-template-columns: 1fr; }
+    .hcard-desc { display: none; }
+    .lab-grid { grid-template-columns: 1fr; }
+    .fc-mini-grid { grid-template-columns: 1fr; }
+    section { padding: 44px 14px; }
+    nav { padding: 10px 14px; }
+  }

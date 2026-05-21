@@ -1,0 +1,131 @@
+/* ═══════════════════════════════════════════════
+   Portfolio — Jean-Marc Jeanneus
+   Admin Sys & Réseau & Cloud | Apprenti Pentester
+   ─────────────────────────────────────────────── */
+
+/* ─── FOOTER ─── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    padding: 48px 48px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-brand {}
+  .footer-brand-name {
+    font-family: 'Space Grotesk', var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .footer-brand-icon {
+    width: 46px; height: 46px;
+    background: rgba(0,255,136,0.12);
+    border: 1px solid rgba(0,255,136,0.25);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent);
+  }
+  .footer-brand-desc {
+    font-family: 'Space Grotesk', var(--font-ui);
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 280px;
+  }
+  .footer-stack-line {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-stack-line span { color: rgba(255,255,255,0.3); }
+
+  .footer-col-title {
+    font-family: 'Space Grotesk', var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .footer-col-title-icon { font-size: 16px; }
+  .footer-col-links { display: flex; flex-direction: column; gap: 12px; }
+  .footer-col-link {
+    font-family: 'Space Grotesk', var(--font-ui);
+    font-size: 14px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-col-link:hover { color: #fff; }
+  .footer-social-link {
+    font-family: 'Space Grotesk', var(--font-ui);
+    font-size: 14px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-social-link:hover { color: #fff; }
+  .footer-social-icon {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 18px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .footer-status {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-status-dot {
+    width: 7px; height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @media (max-width: 899px) {
+    .footer-top { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
+    .footer-bottom { padding: 16px 24px; flex-direction: column; text-align: center; }
+  }

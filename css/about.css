@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════════
+   Portfolio — Jean-Marc Jeanneus
+   Admin Sys & Réseau & Cloud | Apprenti Pentester
+   ─────────────────────────────────────────────── */
+
+/* ─── ABOUT ─── */
+  #about {
+    position: relative;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-text p {
+    color: var(--text-dim);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 400;
+  }
+  .about-text p strong { color: var(--accent); font-weight: 600; }
+
+  .about-terminal {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+  }
+  .terminal-bar {
+    background: var(--bg3);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .t-red { background: #ff5f56; }
+  .t-yellow { background: #ffbd2e; }
+  .t-green { background: #27c93f; }
+  .terminal-title {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-left: 8px;
+    letter-spacing: 1px;
+  }
+  .terminal-body {
+    padding: 20px 24px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .t-prompt { color: var(--accent); }
+  .t-cmd { color: var(--accent2); }
+  .t-out { color: var(--text); }
+  .t-val { color: #ffbd2e; }
+  .t-comment { color: var(--text-dim); }

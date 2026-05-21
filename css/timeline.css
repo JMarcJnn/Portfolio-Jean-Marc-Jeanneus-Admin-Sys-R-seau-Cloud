@@ -1,0 +1,243 @@
+/* ═══════════════════════════════════════════════
+   Portfolio — Jean-Marc Jeanneus
+   Admin Sys & Réseau & Cloud | Apprenti Pentester
+   ─────────────────────────────────────────────── */
+
+/* ─── TIMELINE ─── */
+  #parcours { background: var(--bg); max-width: 100%; padding: 100px 0; }
+
+  .timeline {
+    position: relative;
+    max-width: min(1200px, 90vw);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  /* Centre vertical line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.15) 90%, transparent);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    align-items: start;
+    margin-bottom: 64px;
+    position: relative;
+    gap: 0;
+    width: 100%;
+  }
+
+  /* Left card */
+  .timeline-item:nth-child(odd) .timeline-content {
+    grid-column: 1;
+    margin-right: 32px;
+  }
+  .timeline-item:nth-child(odd) .timeline-dot-wrap {
+    grid-column: 2;
+  }
+  .timeline-item:nth-child(odd) .timeline-spacer {
+    grid-column: 3;
+  }
+
+  /* Right card */
+  .timeline-item:nth-child(even) .timeline-spacer {
+    grid-column: 1;
+  }
+  .timeline-item:nth-child(even) .timeline-dot-wrap {
+    grid-column: 2;
+  }
+  .timeline-item:nth-child(even) .timeline-content {
+    grid-column: 3;
+    margin-left: 32px;
+  }
+
+  .timeline-dot-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    z-index: 2;
+  }
+  .timeline-dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0,255,136,0.15), var(--glow);
+    flex-shrink: 0;
+  }
+  .timeline-item:nth-child(2) .timeline-dot { background: var(--accent); box-shadow: 0 0 0 4px rgba(0,255,136,0.15); }
+  .timeline-item:nth-child(3) .timeline-dot { background: var(--accent); box-shadow: 0 0 0 4px rgba(0,255,136,0.15); }
+  .timeline-item:nth-child(4) .timeline-dot { background: var(--accent); box-shadow: 0 0 0 4px rgba(0,255,136,0.15); }
+
+  .timeline-spacer { min-height: 1px; }
+
+  .timeline-content {
+    background: rgba(0,30,18,0.85);
+    border: 1px solid rgba(0,255,136,0.18);
+    border-radius: 16px;
+    padding: 28px 28px 22px;
+    position: relative;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    overflow: hidden;
+  }
+  .timeline-content:hover {
+    border-color: rgba(0,255,136,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,255,136,0.08);
+  }
+  /* Watermark icon in background */
+  .timeline-content::after {
+    content: attr(data-icon);
+    position: absolute;
+    bottom: -10px; right: 10px;
+    font-size: 90px;
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    filter: grayscale(1) brightness(10);
+  }
+  /* Item 2 — Cyan */
+  .timeline-item:nth-child(2) .timeline-content {
+    background: rgba(0,20,30,0.85);
+    border-color: rgba(0,200,255,0.18);
+  }
+  .timeline-item:nth-child(2) .timeline-content:hover {
+    border-color: rgba(0,200,255,0.5);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,200,255,0.08);
+  }
+  .timeline-item:nth-child(2) .timeline-dot { background: #00c8ff; box-shadow: 0 0 0 4px rgba(0,200,255,0.15); }
+  .timeline-item:nth-child(2) .timeline-org { color: #00c8ff; }
+
+  /* Item 3 — Violet */
+  .timeline-item:nth-child(3) .timeline-content {
+    background: rgba(18,8,30,0.85);
+    border-color: rgba(124,58,237,0.22);
+  }
+  .timeline-item:nth-child(3) .timeline-content:hover {
+    border-color: rgba(124,58,237,0.5);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(124,58,237,0.1);
+  }
+  .timeline-item:nth-child(3) .timeline-dot { background: #7c3aed; box-shadow: 0 0 0 4px rgba(124,58,237,0.15); }
+  .timeline-item:nth-child(3) .timeline-org { color: #a78bfa; }
+
+  /* Item 4 — Ambre */
+  .timeline-item:nth-child(4) .timeline-content {
+    background: rgba(25,15,0,0.85);
+    border-color: rgba(245,158,11,0.18);
+  }
+  .timeline-item:nth-child(4) .timeline-content:hover {
+    border-color: rgba(245,158,11,0.5);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(245,158,11,0.08);
+  }
+  .timeline-item:nth-child(4) .timeline-dot { background: #f59e0b; box-shadow: 0 0 0 4px rgba(245,158,11,0.15); }
+  .timeline-item:nth-child(4) .timeline-org { color: #f59e0b; }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .timeline-date::before {
+    content: '📅';
+    font-size: 13px;
+  }
+  .timeline-role {
+    font-family: 'Space Grotesk', var(--font-display);
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .timeline-org {
+    font-family: 'Space Grotesk', var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .timeline-item:nth-child(even) .timeline-org { color: var(--accent); }
+  .timeline-desc {
+    font-family: 'Space Grotesk', var(--font-ui);
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .timeline-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 3px 10px;
+  }
+
+  /* ─── TIMELINE MOBILE (≤ 700px) — colonne unique gauche ─── */
+  @media (max-width: 700px) {
+    .timeline {
+      max-width: 100% !important;
+      padding: 0 16px !important;
+    }
+    .timeline::before {
+      left: 14px !important;
+      transform: none !important;
+    }
+    /* Tous les items en flex row */
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+      display: flex !important;
+      flex-direction: row !important;
+      grid-template-columns: unset !important;
+      align-items: flex-start;
+      margin-bottom: 24px !important;
+      gap: 0 !important;
+      width: 100% !important;
+    }
+    /* Cacher les spacers */
+    .timeline-item .timeline-spacer,
+    .timeline-item:nth-child(odd) .timeline-spacer,
+    .timeline-item:nth-child(even) .timeline-spacer {
+      display: none !important;
+    }
+    /* Point à gauche */
+    .timeline-item .timeline-dot-wrap,
+    .timeline-item:nth-child(odd) .timeline-dot-wrap,
+    .timeline-item:nth-child(even) .timeline-dot-wrap {
+      grid-column: unset !important;
+      flex-shrink: 0;
+      width: 32px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      order: 0;
+    }
+    /* Card pleine largeur */
+    .timeline-item .timeline-content,
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+      grid-column: unset !important;
+      flex: 1 !important;
+      min-width: 0 !important;
+      margin: 0 0 0 10px !important;
+      order: 1;
+    }
+  }
