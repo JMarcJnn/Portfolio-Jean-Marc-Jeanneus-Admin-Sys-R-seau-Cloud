@@ -1,4 +1,4 @@
-# 🛡️ Portfolio — Jean-Marc Jeanneus
+# 🌍 Portfolio — Jean-Marc Jeanneus
 
 > Administrateur Système & Réseau & Cloud | Apprenti Pentester | Île-de-France  
 
